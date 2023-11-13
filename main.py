@@ -5,8 +5,8 @@ from telethon.tl.functions.messages import GetMessagesViewsRequest
 import requests
 from time import sleep
 
-API_ID = '25875948'
-API_HASH = 'bbc8cd4753b320c932bd56254d2917a0'
+API_ID = '21627756'
+API_HASH = 'fe77fbf0cae9f7f5ece37659e2466cf1'
 user_phone = input("ادخل رقم الهاتف : ")
 client = TelegramClient(user_phone, API_ID, API_HASH)
     
