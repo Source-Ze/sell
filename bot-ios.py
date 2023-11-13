@@ -16,10 +16,10 @@ from telethon.tl.functions.messages import GetMessagesViewsRequest
 from telethon.tl.functions.messages import SendReactionRequest
 import requests
 import json
-API_ID = '8'
-API_HASH = '7245de8e747a0d6fbe11f7cc14fcc0bb'
-bot_token = ""
-sudo = ""
+API_ID = '21627756'
+API_HASH = 'fe77fbf0cae9f7f5ece37659e2466cf1'
+bot_token = "6307474358:AAEin460r-2FvQttBO-hceYvDglAVVef4x0"
+sudo = "6673736816"
 running_processes = {}
 try:
     with open("echo_data.json", "r") as json_file:
