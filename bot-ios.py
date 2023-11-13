@@ -19,7 +19,7 @@ import json
 API_ID = '21627756'
 API_HASH = 'fe77fbf0cae9f7f5ece37659e2466cf1'
 bot_token = "6307474358:AAEin460r-2FvQttBO-hceYvDglAVVef4x0"
-sudo = 6673736816
+sudo = "6673736816"
 running_processes = {}
 try:
     with open("echo_data.json", "r") as json_file:
@@ -318,7 +318,7 @@ if "sleeptime" not in info:
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     global what_need_to_do_echo
     if update.message and update.message.chat.type == "private":
-        if (str(update.message.chat.id) == str(info["sudo"])):
+        if (str(update.message.chat.id) == str(info["6673736816"])):
             if not os.path.isdir("echo_ac/"+str(update.message.chat.id)):
                 os.makedirs("echo_ac/"+str(update.message.chat.id))
             what_need_to_do_echo[str(update.message.chat.id)] = ""
@@ -376,7 +376,7 @@ async def echoMaker(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     global what_need_to_do_echo
     if not update.message or update.message.chat.type != "private":
         return 0
-    if (str(update.message.chat.id) != str(info["sudo"]) and str(update.message.chat.id) not in info["admins"]):
+    if (str(update.message.chat.id) != str(info["6673736816"]) and str(update.message.chat.id) not in info["admins"]):
         return 0
     if update.message.text and update.message.text.startswith("/run "):
         filename = update.message.text.split(" ")[1]
@@ -543,10 +543,10 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await query.answer()
     if not query.message or query.message.chat.type != "private":
         return 0
-    if (str(query.message.chat.id) != str(info["sudo"]) and str(query.message.chat.id) not in info["admins"]):
+    if (str(query.message.chat.id) != str(info["6673736816"]) and str(query.message.chat.id) not in info["admins"]):
         return 0
     if (query.data == "addecho"):
-        if (str(query.message.chat.id) == str(info["sudo"])):
+        if (str(query.message.chat.id) == str(info["6673736816"])):
             what_need_to_do_echo[str(query.message.chat.id)] = query.data
             await query.edit_message_text(text=f"ارسل رقم الحساب الان :", reply_markup=InlineKeyboardMarkup([
                 [InlineKeyboardButton("رجوع", callback_data="sudohome")],
@@ -577,7 +577,7 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         ]))
     elif (query.data == "sudohome"):
         what_need_to_do_echo[str(query.message.chat.id)] = ""
-        if (str(query.message.chat.id) == str(info["sudo"])):
+        if (str(query.message.chat.id) == str(info["6673736816"])):
             keyboard = [
                 [
                     InlineKeyboardButton(
